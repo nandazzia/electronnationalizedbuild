@@ -1,0 +1,20 @@
+{
+  "executableName":"electronnationalizedbuild",
+  "icon": "static/icons/256x256.png",
+  "arch": "arm64",
+  "lintianOverrides": [
+    "changelog-file-missing-in-native-package"
+  ],
+  "copyright": "© haha",
+  "options": {
+    "name": "nationalized_installer",
+    "categories":"Utility",
+    "productName":"electronnationalizedbuild",
+    "homepage":"www.mengguhaijun.com",
+    "mimeTypes": [
+      "x-scheme-handler/myapp"
+    ],
+    "maintainer": "nandazzia <597974450@qq.com>"
+  }
+}
+

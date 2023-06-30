@@ -1,0 +1,74 @@
+{
+  "asar": false,
+  "extraFiles": [],
+  "productName": "electronNationalizedBuild",
+  "appId": "com.mengguhaijun.www",
+  "copyright": "© haha",
+  "publish": [
+    {
+      "provider": "generic",
+      "url": "http://127.0.0.1"
+    }
+  ],
+  "directories": {
+    "output": "build"
+  },
+  "files": [
+    "dist/electron/**/*"
+  ],
+  "linux": {
+    "mimeTypes": [
+      "x-scheme-handler/myapp"
+    ],
+    "vendor": "www.mengguhaijun.com",
+    "target": [
+      {
+        "target": "AppImage",
+        "arch": [
+          "x64"
+        ]
+      },
+      {
+        "target": "deb",
+        "arch": [
+          "x64"
+        ]
+      }
+    ],
+    "category": "Utility",
+    "synopsis": "a app for nationalized build",
+    "icon": "static/icons",
+    "maintainer": "nandazzia <597974450@qq.com>",
+    "artifactName": "ElectronNationalizedBuild",
+    "desktop": {
+      "Name": "ElectronNationalizedBuild统信版",
+      "Comment": "screen for UOS",
+      "GenericName": "党亚南nandazzia",
+      "Type": "Application",
+      "Icon": "/usr/share/icons/hicolor/256x256/apps/electronnationalizedbuild",
+      "StartupNotify": true,
+      "Categories": "Utility"
+    }
+  },
+  "deb": {
+    "synopsis": "meeting App",
+    "artifactName": "ElectronNationalizedBuild麒麟版安装包-${version}-amd64.deb",
+    "compression": "gz"
+  },
+  "dmg": {
+    "contents": [
+      {
+        "x": 410,
+        "y": 150,
+        "type": "link",
+        "path": "/Applications"
+      },
+      {
+        "x": 130,
+        "y": 150,
+        "type": "file"
+      }
+    ]
+  }
+}
+

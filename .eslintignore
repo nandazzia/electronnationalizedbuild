@@ -1,0 +1,6 @@
+test/unit/coverage/**
+test/unit/*.js
+test/e2e/*.js
+/src/renderer/views/vote/checkVoteResults.vue
+/src/renderer/layout/components/Sidebar/index.vue
+/src/renderer/views/hostMan/index.vue

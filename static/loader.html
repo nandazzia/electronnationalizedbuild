@@ -1,0 +1,245 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <style>
+        html {
+            height: 100%;
+            min-height: 100%;
+            overflow: hidden;
+            user-select: none;
+            -webkit-app-region: no-drag;
+
+        }
+
+        html body {
+
+            font: 14px/21px Monaco, sans-serif;
+            color: #999;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-size-adjust: 100%;
+            -moz-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            height: 100%;
+            min-height: 100%;
+            margin: 0;
+            background-color: transparent;
+        }
+
+        html body h4 {
+            margin: 0;
+        }
+
+        body {
+            width: 100%;
+            margin: auto;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            overflow: auto;
+            animation: gradient 15s ease infinite;
+            background-size: 100% 100%;
+            background: linear-gradient(315deg, rgba(101, 0, 94, 1) 3%, rgba(60, 132, 206, 1) 38%, rgba(48, 238, 226, 1) 68%, rgba(255, 25, 25, 1) 98%) fixed;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0 0;
+            }
+            50% {
+                background-position: 100% 100%;
+            }
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+        @keyframes wave {
+            2% {
+                transform: translateX(1%);
+            }
+
+            25% {
+                transform: translateX(-25%);
+            }
+
+            50% {
+                transform: translateX(-50%);
+            }
+
+            75% {
+                transform: translateX(-25%);
+            }
+
+            100% {
+                transform: translateX(1%);
+            }
+        }
+
+        .scene {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            background: transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        span {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            background: inherit;
+        }
+
+        span:nth-child(1) {
+            filter: blur(5px);
+        }
+
+        span:nth-child(2) {
+            filter: blur(5px);
+        }
+
+        span:nth-child(3) {
+            filter: blur(10px);
+        }
+
+        span:nth-child(4) {
+            filter: blur(50px);
+        }
+
+        span::after {
+            position: absolute;
+            content: "";
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            background: transparent;
+            border-radius: inherit;
+        }
+        @keyframes before {
+            0% {
+                transition: 2s ease-in-out;
+                transform: rotate(-45deg) translate(0, 60px);
+            }
+            50% {
+
+            }
+            100% {
+            }
+        }
+
+        @keyframes breath {
+            from {
+                font-size: 4vw;
+                filter: brightness(100%);
+                /*opacity: 0.5;*/
+                color: rgba(255, 255, 250, 0.6);
+            }
+            to {
+                font-size: 5vw;
+                /*opacity: 1;*/
+                filter: brightness(120%);
+                color: rgba(255, 255, 255, 1);
+
+            }
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(1turn);
+            }
+        }
+
+        /* @keyframes slidein{
+          from{
+
+          }
+          to{
+
+          }
+        } */
+
+        .bg {
+            animation: slide 2s ease-in-out infinite alternate;
+            background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+            bottom: 0;
+            left: -50%;
+            opacity: .5;
+            position: fixed;
+            right: -50%;
+            top: 0;
+            z-index: -1;
+        }
+
+        .bg2 {
+            animation-direction: alternate-reverse;
+            animation-duration: 3s;
+        }
+
+        .bg3 {
+            animation-duration: 4s;
+        }
+
+        .content {
+            width: 80%;
+            font-size: 5vw;
+            background-color: rgba(255, 255, 255, .5);
+            border-radius: .25em;
+            box-shadow: 0 0 .25em rgba(0, 0, 0, .25);
+            box-sizing: border-box;
+            margin: 0 auto;
+            padding: 5vw 2vw;
+          /*filter: blur(5px);*/
+            text-align: center;
+
+            /*position: fixed;*/
+            /*top: 50%;*/
+            /*left: 50%;*/
+            /*transform: translate(-50%, -50%);*/
+
+        }
+
+        p {
+            color: #fff;
+            padding: 0;
+            margin: 0;
+            font-size: 6vw;
+            line-height: 6vw;
+            /*font-family: monospace;*/
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+            /*animation: breath 3s ease-in-out infinite;*/
+            position: relative;
+            /*overflow: hidden;*/
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(-25%);
+            }
+            100% {
+                transform: translateX(25%);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="scene">
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div class="content">
+        <p>Electron-Nationalized-Build</p>
+    </div>
+</div>
+
+</body>
+
+</html>

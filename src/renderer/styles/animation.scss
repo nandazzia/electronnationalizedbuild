@@ -1,0 +1,43 @@
+.plus-icon-enter-active{
+  transition: opacity .5s;
+}
+.plus-icon-enter{
+  opacity: 0;
+}
+.plus-icon-leave-active{
+  transition: opacity .5s;
+}
+.plus-icon-leave-to{
+  opacity: 0;
+}
+
+// 切换的延时
+.bounce-in-enter-active {
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;//CSS 的transition-delay属性规定了在过渡效果开始作用之前需要等待的时间
+}
+.slide-fade-leave-active {
+  transition: all .2s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+//  cube-bezier() 函数定义三次贝塞尔曲线（Cubic Bezier curve）  数值必需。x1 和 x2 必须是 0 到 1 之间的数字。
+}
+
+// 导航条 切换 横向切换
+.bounce-in-enter,
+.bounce-in-leave-to {
+  transform: translateX(45vw);
+  opacity: 0.8;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

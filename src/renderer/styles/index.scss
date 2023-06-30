@@ -1,0 +1,60 @@
+@import './element-ui.scss';
+@import './animation';
+
+html,body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent; //去除高亮
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+body{
+  width: 100vw;//重要 不然不适配其他屏幕
+  height: 100vh;
+}
+#app {
+  width: 100vw;//重要  不然不适配高分辨率屏幕
+  height: 100vh;
+}
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
